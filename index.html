@@ -8,7 +8,7 @@
 .footer{text-align:center;color:var(--muted);font-size:10px;padding:8px 18px 20px}
 @media(min-width:600px){.main{padding:22px}.top{padding:28px 24px}.top h1{font-size:32px}.panel{padding:19px}.fields{gap:14px}}
 </style></head><body><div class="app"><header class="top"><div class="eyebrow">A pocket companion for the table</div><h1>Adventurer's Field Guide</h1><p>D&D fifth edition · 2024 rules reference</p></header>
-<nav class="tabs" id="tabs"><button class="active" data-tab="class">Class Features</button><button data-tab="species">Species</button><button data-tab="conditions">Conditions</button><button data-tab="spellcasting">Spellcasting</button></nav>
+<nav class="tabs" id="tabs"><button class="active" data-tab="class">Class Features</button><button data-tab="species">Species</button><button data-tab="spellcasting">Spellcasting</button></nav>
 <main class="main">
 <section id="view-class">
 <div class="panel"><h2 class="section-title">Build your reference</h2><div class="fields"><div class="field"><label for="classSelect">Class</label><select id="classSelect"></select></div><div class="field"><label for="subSelect">Subclass</label><select id="subSelect"></select></div></div></div>
@@ -21,10 +21,10 @@
 <div class="panel"><h2 class="section-title">Choose your species</h2><p class="subtle" style="margin-top:-7px">Select a species and, where applicable, a lineage or ancestry to see its traits and when they become available.</p><div class="fields"><div class="field"><label for="speciesSelect">Species</label><select id="speciesSelect"></select></div><div class="field"><label for="subspeciesSelect">Subspecies / lineage</label><select id="subspeciesSelect"><option value="">None</option></select></div></div></div>
 <div class="panel"><h2 class="section-title" id="speciesHeading">Species features</h2><p class="subtle" id="speciesIntro" style="margin-top:-7px"></p><div class="feature-list" id="speciesFeatureList"></div></div>
 </section>
-<section id="view-conditions" class="hide"><div class="panel"><h2 class="section-title">Conditions</h2><p class="subtle">Tap a condition for a quick summary.</p><div id="conditionList"></div></div></section>
-<section id="view-spellcasting" class="hide"><div class="panel"><h2 class="section-title">Spellcasting quick reference</h2><div class="rule-row"><b>Spell attack</b><span>Proficiency bonus + spellcasting ability modifier</span></div><div class="rule-row"><b>Spell save DC</b><span>8 + proficiency bonus + spellcasting ability modifier</span></div><div class="rule-row"><b>Concentration</b><span>You can concentrate on only one spell at a time. Damage may force a Constitution saving throw.</span></div><div class="rule-row"><b>Ritual</b><span>A spell with the Ritual tag can be cast as a ritual if you have it prepared, adding 10 minutes to its casting time.</span></div><div class="rule-row"><b>Components</b><span>Verbal (V), Somatic (S), Material (M). A focus can replace material components unless they have a listed cost or are consumed.</span></div></div><div class="panel"><h2 class="section-title">Spell library</h2><p class="subtle" style="margin-top:-7px">Filter spells by class, level and school. Tap a spell to view its table-side details.</p><div class="spell-filters"><div class="field"><label for="spellClassFilter">Class</label><select id="spellClassFilter"><option value="All">All classes</option></select></div><div class="field"><label for="spellLevelFilter">Spell level</label><select id="spellLevelFilter"><option value="All">All levels</option><option value="0">Cantrips (Level 0)</option><option value="1">Level 1</option><option value="2">Level 2</option></select></div><div class="field"><label for="spellSchoolFilter">School</label><select id="spellSchoolFilter"><option value="All">All schools</option></select></div></div><p class="spell-result-count" id="spellResultCount"></p><div class="spell-list" id="spellList"></div></div><div class="panel"><h2 class="section-title">Spell slots by class level</h2><p class="note">Full casters use the full progression; Paladins and Rangers use half-caster progression; Warlocks use Pact Magic. This table is a quick reminder, not a substitute for a class spell table.</p><div id="slotTable"></div></div></section>
+
+<section id="view-spellcasting" class="hide"><div class="panel"><h2 class="section-title">Spellcasting quick reference</h2><div class="rule-row"><b>Spell attack</b><span>Proficiency bonus + spellcasting ability modifier</span></div><div class="rule-row"><b>Spell save DC</b><span>8 + proficiency bonus + spellcasting ability modifier</span></div><div class="rule-row"><b>Concentration</b><span>You can concentrate on only one spell at a time. Damage may force a Constitution saving throw.</span></div><div class="rule-row"><b>Ritual</b><span>A spell with the Ritual tag can be cast as a ritual if you have it prepared, adding 10 minutes to its casting time.</span></div><div class="rule-row"><b>Components</b><span>Verbal (V), Somatic (S), Material (M). A focus can replace material components unless they have a listed cost or are consumed.</span></div></div><div class="panel"><h2 class="section-title">Spell slots by class level</h2><p class="note">Full casters use the full progression; Paladins and Rangers use half-caster progression; Warlocks use Pact Magic. This table is a quick reminder, not a substitute for a class spell table.</p><div id="slotTable"></div></div><div class="panel"><h2 class="section-title">Spell library</h2><p class="subtle" style="margin-top:-7px">Filter spells by class, level and school. Tap a spell to view its table-side details.</p><div class="spell-filters"><div class="field"><label for="spellClassFilter">Class</label><select id="spellClassFilter"><option value="All">All classes</option></select></div><div class="field"><label for="spellLevelFilter">Spell level</label><select id="spellLevelFilter"><option value="All">All levels</option><option value="0">Cantrips (Level 0)</option><option value="1">Level 1</option><option value="2">Level 2</option></select></div><div class="field"><label for="spellSchoolFilter">School</label><select id="spellSchoolFilter"><option value="All">All schools</option></select></div></div><p class="spell-result-count" id="spellResultCount"></p><div class="spell-list" id="spellList"></div></div></section>
 </main><div class="footer">Independent fan-made reference. Not affiliated with or endorsed by Wizards of the Coast.</div></div>
-<div class="bottom"><div class="bottom-inner"><button class="active" data-tab="class"><span>♜</span>Class</button><button data-tab="species"><span>♧</span>Species</button><button data-tab="conditions"><span>◈</span>Conditions</button><button data-tab="spellcasting"><span>✧</span>Spells</button></div></div>
+<div class="bottom"><div class="bottom-inner"><button class="active" data-tab="class"><span>♜</span>Class</button><button data-tab="species"><span>♧</span>Species</button><button data-tab="spellcasting"><span>✧</span>Spells</button></div></div>
 <script>
 const classes = {
 Barbarian:{die:'d12',saves:'Strength, Constitution',skills:'Choose 2: Animal Handling, Athletics, Intimidation, Nature, Perception, Survival',cast:'None',subs:['Path of the Berserker','Path of the Wild Heart','Path of the World Tree','Path of the Zealot'],features:{1:['Rage','Unarmored Defense','Weapon Mastery'],2:['Danger Sense','Reckless Attack'],3:['Primal Knowledge','Subclass feature'],4:['Ability Score Improvement'],5:['Extra Attack','Fast Movement'],6:['Subclass feature'],7:['Feral Instinct','Instinctive Pounce'],8:['Ability Score Improvement'],9:['Brutal Strike'],10:['Subclass feature'],11:['Relentless Rage'],12:['Ability Score Improvement'],13:['Improved Brutal Strike'],14:['Subclass feature'],15:['Persistent Rage'],16:['Ability Score Improvement'],17:['Improved Brutal Strike'],18:['Indomitable Might'],19:['Epic Boon'],20:['Primal Champion']},resources:l=>[['Rage',l>=17?6:l>=12?5:l>=6?4:l>=3?3:2+' / Long Rest',l>=17?'Unlimited':'Uses / Long Rest'],['Rage damage',l>=16?'+4':l>=9?'+3':'+2','Per hit while raging']]},
@@ -216,37 +216,63 @@ function renderSpecies(){
 speciesSelect.addEventListener('change',updateSubspecies);
 subspeciesSelect.addEventListener('change',renderSpecies);
 initSpecies();
-function switchTab(tab){document.querySelectorAll('[data-tab]').forEach(b=>b.classList.toggle('active',b.dataset.tab===tab));['class','species','conditions','spellcasting'].forEach(t=>document.getElementById('view-'+t).classList.toggle('hide',t!==tab));window.scrollTo({top:0,behavior:'smooth'})}document.querySelectorAll('[data-tab]').forEach(b=>b.addEventListener('click',()=>switchTab(b.dataset.tab)));
+function switchTab(tab){document.querySelectorAll('[data-tab]').forEach(b=>b.classList.toggle('active',b.dataset.tab===tab));['class','species','spellcasting'].forEach(t=>document.getElementById('view-'+t).classList.toggle('hide',t!==tab));window.scrollTo({top:0,behavior:'smooth'})}document.querySelectorAll('[data-tab]').forEach(b=>b.addEventListener('click',()=>switchTab(b.dataset.tab)));
 function updateSlotTable(){
+ const target=document.getElementById('slotTable');
+ const selectedClass=classEl.value;
+ const selectedSubclass=subEl.value;
  const fullCasterNames=['Wizard','Bard','Cleric','Sorcerer','Druid'];
- if(fullCasterNames.includes(classEl.value)){
+ const halfCasterNames=['Paladin','Ranger'];
+ const headersFor=(labels)=>`<div class="slot-wrap"><table class="slot-table"><thead><tr><th>Character level</th>${labels.map(h=>`<th>${h}</th>`).join('')}</tr></thead><tbody>`;
+ const renderRows=(rows,labels)=>{
+  target.innerHTML=headersFor(labels)+rows.map((row,i)=>`<tr><td>Level ${row[0]}</td>${row.slice(1).map(v=>`<td>${v}</td>`).join('')}</tr>`).join('')+'</tbody></table></div>';
+ };
+ if(fullCasterNames.includes(selectedClass)){
   const slotRows=[
-   [2,'—','—','—','—','—','—','—','—'],
-   [3,'—','—','—','—','—','—','—','—'],
-   [4,2,'—','—','—','—','—','—','—'],
-   [4,3,'—','—','—','—','—','—','—'],
-   [4,3,2,'—','—','—','—','—','—'],
-   [4,3,3,'—','—','—','—','—','—'],
-   [4,3,3,1,'—','—','—','—','—'],
-   [4,3,3,2,'—','—','—','—','—'],
-   [4,3,3,3,1,'—','—','—','—'],
-   [4,3,3,3,2,'—','—','—','—'],
-   [4,3,3,3,2,1,'—','—','—'],
-   [4,3,3,3,2,1,'—','—','—'],
-   [4,3,3,3,2,1,1,'—','—'],
-   [4,3,3,3,2,1,1,'—','—'],
-   [4,3,3,3,2,1,1,1,'—'],
-   [4,3,3,3,2,1,1,1,'—'],
-   [4,3,3,3,2,1,1,1,1],
-   [4,3,3,3,3,1,1,1,1],
-   [4,3,3,3,3,2,1,1,1],
-   [4,3,3,3,3,2,2,1,1]
+   [1,2,'—','—','—','—','—','—','—','—'],
+   [2,3,'—','—','—','—','—','—','—','—'],
+   [3,4,2,'—','—','—','—','—','—','—'],
+   [4,4,3,'—','—','—','—','—','—','—'],
+   [5,4,3,2,'—','—','—','—','—','—'],
+   [6,4,3,3,'—','—','—','—','—','—'],
+   [7,4,3,3,1,'—','—','—','—','—'],
+   [8,4,3,3,2,'—','—','—','—','—'],
+   [9,4,3,3,3,1,'—','—','—','—'],
+   [10,4,3,3,3,2,'—','—','—','—'],
+   [11,4,3,3,3,2,1,'—','—','—'],
+   [12,4,3,3,3,2,1,'—','—','—'],
+   [13,4,3,3,3,2,1,1,'—','—'],
+   [14,4,3,3,3,2,1,1,'—','—'],
+   [15,4,3,3,3,2,1,1,1,'—'],
+   [16,4,3,3,3,2,1,1,1,'—'],
+   [17,4,3,3,3,2,1,1,1,1],
+   [18,4,3,3,3,3,1,1,1,1],
+   [19,4,3,3,3,3,2,1,1,1],
+   [20,4,3,3,3,3,2,2,1,1]
   ];
-  const headers=['1st','2nd','3rd','4th','5th','6th','7th','8th','9th'];
-  document.getElementById('slotTable').innerHTML=`<div class="slot-wrap"><table class="slot-table"><thead><tr><th>Class level</th>${headers.map(h=>`<th>${h}</th>`).join('')}</tr></thead><tbody>${slotRows.map((row,i)=>`<tr><td>Level ${i+1}</td>${row.map(v=>`<td>${v}</td>`).join('')}</tr>`).join('')}</tbody></table></div>`;
+  renderRows(slotRows,['1st','2nd','3rd','4th','5th','6th','7th','8th','9th']);
+ }else if(halfCasterNames.includes(selectedClass)){
+  const rows=[
+   [1,2,'—','—','—','—'],[2,2,'—','—','—','—'],[3,3,'—','—','—','—'],[4,3,'—','—','—','—'],
+   [5,4,2,'—','—','—'],[6,4,2,'—','—','—'],[7,4,3,'—','—','—'],[8,4,3,'—','—','—'],
+   [9,4,3,2,'—','—'],[10,4,3,2,'—','—'],[11,4,3,3,'—','—'],[12,4,3,3,'—','—'],
+   [13,4,3,3,1,'—'],[14,4,3,3,1,'—'],[15,4,3,3,2,'—'],[16,4,3,3,2,'—'],
+   [17,4,3,3,3,1],[18,4,3,3,3,1],[19,4,3,3,3,2],[20,4,3,3,3,2]
+  ];
+  renderRows(rows,['1st','2nd','3rd','4th','5th']);
+ }else if((selectedClass==='Fighter'&&selectedSubclass==='Eldritch Knight')||(selectedClass==='Rogue'&&selectedSubclass==='Arcane Trickster')){
+  const rows=[
+   [3,2,'—','—','—'],[4,3,'—','—','—'],[5,3,'—','—','—'],[6,3,'—','—','—'],
+   [7,4,2,'—','—'],[8,4,2,'—','—'],[9,4,2,'—','—'],[10,4,3,'—','—'],
+   [11,4,3,'—','—'],[12,4,3,'—','—'],[13,4,3,2,'—'],[14,4,3,2,'—'],
+   [15,4,3,2,'—'],[16,4,3,3,'—'],[17,4,3,3,'—'],[18,4,3,3,'—'],
+   [19,4,3,3,1],[20,4,3,3,1]
+  ];
+  renderRows(rows,['1st','2nd','3rd','4th']);
+ }else if(selectedClass==='Warlock'){
+  target.innerHTML='<p class="subtle">Warlocks use Pact Magic, which has a separate spell-slot progression.</p>';
  }else{
-  const full=[2,3,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4];
-  document.getElementById('slotTable').innerHTML=Array.from({length:20},(_,i)=>{let l=i+1;let slots=full[i]?'Full caster: '+[0,2,3,4,5,6,7,8,9,9,9,9,9,9,9,9,9,9,9,9][i]+'th-level maximum':'No standard slots';return `<div class="rule-row"><b>Level ${l}</b><span>${slots}</span></div>`}).join('');
+  target.innerHTML='<p class="subtle">Not a spellcasting class</p>';
  }
 }
 
@@ -270,7 +296,6 @@ function renderSpellLibrary(){
 spellClassFilter.addEventListener('change',renderSpellLibrary);spellLevelFilter.addEventListener('change',renderSpellLibrary);spellSchoolFilter.addEventListener('change',renderSpellLibrary);
 spellListEl.addEventListener('click',event=>{const button=event.target.closest('[data-spell-index]');if(!button)return;const detail=button.nextElementSibling;const open=detail.classList.toggle('open');button.querySelector('.spell-arrow').textContent=open?'−':'＋';});
 renderSpellLibrary();
-document.getElementById('profTable').innerHTML=Array.from({length:20},(_,i)=>`<div class="rule-row"><b>Level ${i+1}</b><span>+${prof(i+1)}</span></div>`).join('');document.getElementById('conditionList').innerHTML=conditions.map((c,i)=>`<div><button class="feature" data-cond="${i}"><b>${c[0]}</b><span class="chev">＋</span></button><div class="feature-detail" id="cond-${i}">${c[1]}</div></div>`).join('');document.querySelectorAll('[data-cond]').forEach(b=>b.addEventListener('click',()=>document.getElementById('cond-'+b.dataset.cond).classList.toggle('open')));
 updateSlotTable();
 classEl.value='Bard';initSub();render();
 </script></body></html>
