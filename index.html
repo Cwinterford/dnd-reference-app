@@ -986,7 +986,7 @@ function renderEquipment(){
   let html='';
   Object.entries(equipmentData.armour).forEach(([group,rows])=>{
    const note=group==='Light Armour'?'The following armour takes 1 minute to don or doff.':group==='Medium Armour'?'The following armour takes 5 minutes to don and 1 minute to doff.':group==='Heavy Armour'?'The following armour takes 10 minutes to don and 5 minutes to doff.':'Utilize action to don or doff.';
-   html+=`<div class="panel equipment-group"><h3>${equipmentEscape(group)}</h3><p class="equipment-note">${note}</p>${rows.map(row=>equipmentAccordion(row[0],equipmentRowsTable(['AC','Str Req','Stealth','Weight','Value'],[row]))).join('')}</div>`;
+   html+=`<div class="panel equipment-group"><h3>${equipmentEscape(group)}</h3><p class="equipment-note">${note}</p>${rows.map(row=>equipmentAccordion(row[0],equipmentRowsTable(['AC','Str Req','Stealth','Weight','Value'],[row.slice(1)]))).join('')}</div>`;
   });
   html+=`<div class="panel equipment-group"><h2 class="section-title">Armour Training</h2><p style="font-size:12px;line-height:1.5">Anyone can don armor or hold a Shield, but only those with training can use them effectively, as explained below. A monster has training with any armor in its stat block.</p>${[['Light, Medium, or Heavy Armor',"If you wear Light, Medium, or Heavy armor and lack training with it, you have Disadvantage on any D20 Test that involves Strength or Dexterity, and you can't cast spells."],['Shield','You gain the Armor Class benefit of a Shield only if you have training with it.']].map(([n,d])=>`<details class="equipment-info"><summary>${n}</summary><p>${d}</p></details>`).join('')}</div>`;
   target.innerHTML=html;
